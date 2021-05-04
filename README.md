@@ -2,6 +2,8 @@
 
 [![License][badge-license]][badge-url-license]
 
+_Your personal vaccine slots tracker_
+
 ## Description
 
 A platform independent application which sends an _sms_ to your phone when vaccination slots are available for a particular pincode within the next **30 days**. It checks for slots **every minute**. If a slot is available it will send you an SMS at that instant only. If a slot is not available, it will not send an SMS.
