@@ -6,7 +6,7 @@ _Your personal vaccine slots tracker_
 
 ## Description
 
-A platform independent application which sends an _sms_ to your phone when vaccination slots are available for a particular pincode within the next **30 days**. It checks for slots **every minute**. If a slot is available it will send you an SMS at that instant itself. If a slot is not available, it will not send an SMS.
+A platform independent application which sends an _sms_ to your phone when vaccination slots are available for a particular pincode within the next **30 days**. It checks for slots **every 5 minutes**. If a slot is available it will send you an SMS at that instant itself. If a slot is not available, it will not send an SMS.
 
 ## Prerequisites
 1. Docker installation (Any version should work) - (Recommended)[Installation for Mac](https://docs.docker.com/docker-for-mac/install/), [Installation for Windows](https://docs.docker.com/docker-for-windows/install/), [Installation for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)(Recommeded)
@@ -69,7 +69,7 @@ If slots are available, you'll get a message as shown below(format subjected to 
 ![sms](img/sms.png)
 
 ### How to test if my application is working or not?
-For testing purpose, change your age to anything > 45 years and select a pincode for which slots are available for 45+ ages. Then follow the steps from _Step 5_. After your application is running, you should receive a message every other minute. Close the terminal after confirmation.
+For testing purpose, change your age to anything > 45 years and select a pincode for which slots are available for 45+ ages. Then follow the steps from _Step 5_. After your application is running, you should receive a message every 5 mins. Wait for 5 mins to receive the first msg. Close the terminal after confirmation.
 
 
 ### What to do if I accidently closed my terminal session?
