@@ -49,29 +49,21 @@ $ nano app_config.py
 
 5. Build the docker image
 ```bash
-$ docker build .
+$ docker build  -t <PINCODE> .
 ```
+_Eg: ```docker build -t 180012 .```_
 
-6. Copy the _Image ID_ of the latest image.
+
+6. Run this command to start the application in the container
 ```bash
-$ docker image ls
-```
-Copy the _Image ID_ of the top image. (as shown below _3647789d2f9c_)
-![docker image](img/imageID.png)
-
-7. Run this command to start the application in the container
-```bash
-$ docker run -it --env=PYTHONPATH=/usr/local/bin/python3 <IMAGE_ID>
+$ docker run -d --env=PYTHONPATH=/usr/local/bin/python3 <PINCODE>
 ```
 
-_Eg: ```$ docker run -it --env PYTHONPATH=/usr/local/bin/python3 3647789d2f9c```_
+_Eg: ```$ docker run -d --env PYTHONPATH=/usr/local/bin/python3 180012```_
 
 
-After this you'll see that the application starts running. You can check if the application container is running by doing ```docker ps```. And you'll see a new container there. Also you can open the docker desktop application and see your info there.
+The application will start running. You can check if the application container is running by doing ```docker ps```. And you'll see a new container there. Also you can open the docker desktop application and see your info there.
 
-![running terminal](img/final.png)
-
-**DO NOT close the terminal as it will kill the container/application also. Better option is to minimise the terminal**
 
 If slots are available, you'll get a message as shown below(format subjected to change based on feedback)
 ![sms](img/sms.png)
@@ -92,6 +84,9 @@ After you book a vaccine session successfully or you don't want these sms on you
 
 ### What to do if I want SMS Alerts for multiple pincode?
 You can build an image(Step 5) with different pincodes, and run the application/container for each of those pincodes.
+
+
+**Caution: Please check if container is running by doing ``docker ps`` everytime you close the lid of your laptop. This problem will not come if you have deployed this application somewhere**
 
 
 ## Contributing
