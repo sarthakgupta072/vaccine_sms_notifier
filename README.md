@@ -56,7 +56,7 @@ _Eg: ```docker build -t 180012 .```_
 
 6. Run this command to start the application in the container
 ```bash
-$ docker run -d --env=PYTHONPATH=/usr/local/bin/python3 <PINCODE>
+$ docker run -d --env PYTHONPATH=/usr/local/bin/python3 <PINCODE>
 ```
 
 _Eg: ```$ docker run -d --env PYTHONPATH=/usr/local/bin/python3 180012```_
